@@ -1,27 +1,102 @@
-.recent-work {
-    padding: 20px 0;
+.recent-work{
     text-align: center;
+    padding: 0 2rem;
+    color: black;
+ 
+ 
 }
-
-.card {
-    background: #f0efef;   /* mantém o fundo escuro */
-    padding: 15px;         /* reduz o espaçamento interno */
-    box-shadow: 0 2px 6px rgba(25, 0, 250, 0.4); /* sombra leve para dar destaque sem parecer borda */
+ 
+.recent-work .title{
+font-weight: bold;
+font-size: 2.5rem;
+margin-top: 8rem;
+margin-bottom: 3.5rem;
+ 
 }
+ 
+.recent-work .subtitle{
+font-size: 3rem;
+line-height: 3rem;
 
-/* container das imagens */
-.card {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* permite quebrar linha */
+ 
 }
-
-/* imagens */
-.card img {
-    width: 450px;
-    max-width: 100%;
+ 
+.recent-work .subtitle a{
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 2rem;
+}
+ 
+.recent-work .subtitle a:hover{
+    text-decoration: underline;
+    font-size: 2rem;
+}
+ 
+.recent-work .grid{
+margin-top: 5rem;
+display: grid;
+grid-template-columns: 1fr;
+gap: 2rem;
+ 
+}
+ 
+.recent-work .item  {
+position: relative;
+overflow: hidden;
+border-radius: 1.5rem;
+ 
+}
+ 
+ 
+.recent-work .item .img{
+    width: 100%;
     height: auto;
-    border-radius: 5px;
-    border: none; /* remove borda das imagens */
+    transition: all ease .5s;
+}
+ 
+.recent-work .item .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 2rem;
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+    inset: 0 0 0 0 ;
+
+    transition: all ease .5s;
+    opacity: 0;
+}
+ 
+.recent-work .item .overlay .button {
+    margin-top: 2rem;
+    color: var(--primary-foreground);
+    text-decoration: none;
+}
+ 
+.recent-work .item:hover .img{
+transform: scale(1.2);
+}
+ 
+ 
+.recent-work .item:hover .overlay{
+    opacity: 1;
+}
+ 
+ 
+@media(width > 600px){
+    .recent-work .title{
+        font-size: 3.5rem;
+    }
+    .recent-work .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(width > 900px){
+    .recent-work .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
