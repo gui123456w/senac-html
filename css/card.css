@@ -1,0 +1,27 @@
+.recent-work {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.card {
+    background: #f0efef;   /* mantém o fundo escuro */
+    padding: 15px;         /* reduz o espaçamento interno */
+    box-shadow: 0 2px 6px rgba(25, 0, 250, 0.4); /* sombra leve para dar destaque sem parecer borda */
+}
+
+/* container das imagens */
+.card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* permite quebrar linha */
+}
+
+/* imagens */
+.card img {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: none; /* remove borda das imagens */
+}
